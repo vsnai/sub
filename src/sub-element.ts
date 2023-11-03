@@ -13,9 +13,7 @@ export class SubElement extends LitElement {
     setTimeout(() => (this.count = 1), 2000);
     setTimeout(() => (this.count = 0), 3000);
     setTimeout(() => {
-      console.log("message posted ...");
-
-      window.parent.postMessage(
+      window.opener.postMessage(
         "https://jsonplaceholder.typicode.com/todos/1",
         "*"
       );
